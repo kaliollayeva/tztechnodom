@@ -49,7 +49,6 @@ function createCard(product) {
   return card;
 }
 
-
 function renderProducts() {
   const nextProducts = products.slice(
     displayedCount,

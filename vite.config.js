@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/tztechnodom/', // <-- Замените 'repository' на имя вашего репозитория
+  base: '/tztechnodom/',
   build: {
-    outDir: 'dist', // Папка для сборки
+    outDir: 'dist',
   },
 });
 

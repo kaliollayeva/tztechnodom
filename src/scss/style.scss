@@ -126,11 +126,11 @@ body {
 
     &__button {
       &--delete {
+        position: relative;
         background-color: #f4f4f4;
         inline-size: 100%;
         block-size: 34px;
         border-radius: 16px;
-
         color: #747a81;
         font-size: clamp(0.625rem, 0.5833rem + 0.1854vw, 0.75rem);
         font-weight: 300;
@@ -139,19 +139,27 @@ body {
         margin-top: 8px;
       }
 
-      // &--delete::before {
-      //   content: "";
-      //   display: inline;
-      //   background-image: src('../../public/images/Vector.png') no-repeat center center;
-      //   width: 100%;
-      //   height: 100%;
-      //   // object-fit: cover;
-
-      // }
+      &--delete::before {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 15.6px;
+        left: 62px;
+        background: url("../../public/images/Vector.png") no-repeat center
+          center;
+        width: 8px;
+        height: 8px;
+        transform: translateY(-50%);
+        background-size: contain;
+      }
 
       &--delete:hover {
-        background-color: #DF0613;
-        color: #FFFFFF;
+        background-color: #df0613;
+        color: #ffffff;
+      }
+
+      &--delete:hover::before {
+        display: inline;
       }
 
       &--more {
@@ -168,7 +176,7 @@ body {
       }
 
       &--more:hover {
-        background-color: #005DBA;
+        background-color: #005dba;
       }
     }
   }
@@ -216,6 +224,11 @@ body {
         &--delete {
           block-size: 28px;
           line-height: 11.72px;
+        }
+
+        &--delete::before {
+          top: 13px;
+          left: 34px;
         }
 
         &--more {
