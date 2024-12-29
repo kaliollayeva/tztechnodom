@@ -181,6 +181,17 @@ body {
     }
   }
 
+  @media (max-width: 400px) {
+    .card {
+      &__button {
+        &--delete::before {
+          top: 17px;
+          left: 34px;
+        }
+      }
+    }
+  }
+
   @media (max-width: 360px) {
     .card {
       max-inline-size: 328px;
