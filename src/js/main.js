@@ -1,5 +1,4 @@
 import "../scss/style.scss";
-import "../../public/fonts/fonts.scss";
 
 const cardPrice = document.querySelector(".card__price");
 
