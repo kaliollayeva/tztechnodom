@@ -6,7 +6,8 @@ body {
   max-width: 1440px;
   box-sizing: border-box;
   background-color: #f4f4f4;
-
+  padding: 16px;
+  
   ul,
   button {
     margin: 0;
@@ -20,9 +21,9 @@ body {
     padding: 0;
   }
 
-  .page {
-    padding-top: 56px;
-  }
+  // .page {
+  //   padding: 56px;
+  // }
 
   .card {
     max-inline-size: 944px;
