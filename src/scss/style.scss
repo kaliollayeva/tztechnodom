@@ -1,0 +1,214 @@
+@import "normalize.css";
+@import "variables.scss";
+
+body {
+  min-width: 360px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+
+  ul,
+  button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  p,
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    max-inline-size: 944px;
+    margin: 0 auto;
+    font-family: "Roboto", serif;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      inline-size: clamp(156px, 133.3333px + 6.2963cqi, 224px);
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 8px 8px 16px 8px;
+      box-sizing: border-box;
+    }
+
+    &__sticker {
+      position: absolute;
+      display: flex;
+      top: 8px;
+      left: 8px;
+      box-sizing: border-box;
+      padding: 4px 8px;
+      background-color: #73be6f;
+      border-radius: 8px;
+      inline-size: 93px;
+      block-size: 24px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__sticker p {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: clamp(0.5rem, 0.4166rem + 0.3707vw, 0.75rem);
+      line-height: 15.6px;
+      text-wrap: nowrap;
+    }
+
+    &__image {
+      box-sizing: border-box;
+      inline-size: clamp(140px, 117.3333px + 6.2963cqi, 208px);
+      block-size: clamp(140px, 117.3333px + 6.2963cqi, 208px);
+      padding: 10px 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__image img {
+      block-size: 100%;
+      inline-size: 100%;
+      object-fit: contain;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 8px;
+    }
+
+    &__title {
+      block-size: 42px;
+      font-size: clamp(0.625rem, 0.5rem + 0.5556vw, 1rem);
+      line-height: 20.8px;
+      font-weight: 600;
+      color: #464c53;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__description {
+      block-size: 48px;
+      font-size: clamp(0.5rem, 0.4166rem + 0.3707vw, 0.75rem);
+      line-height: 15.6px;
+      font-weight: 300;
+      color: #747a81;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__price {
+      font-size: clamp(1rem, 0.8333rem + 0.7407vw, 1.5rem);
+      line-height: 30px;
+      font-weight: 600;
+      color: #2685e4;
+      margin-top: 8px;
+    }
+
+    &__button {
+
+      &--delete {
+        background-color: #f4f4f4;
+        inline-size: 100%;
+        block-size: 34px;
+        border-radius: 16px;
+
+        color: #747a81;
+        font-size: clamp(0.625rem, 0.5833rem + 0.1854vw, 0.75rem);
+        font-weight: 300;
+        line-height: 14.06px;
+        border: none;
+        margin-top: 8px;
+      }
+
+      &--more {
+        inline-size: 100%;
+        block-size: 51px;
+        font-size: clamp(0.875rem, 0.8333rem + 0.1854vw, 1rem);
+        font-weight: 600;
+        line-height: 18.75px;
+        color: #ffffff;
+        border: none;
+        background-color: #2685e4;
+        border-radius: 16px;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+
+    .card {
+      max-inline-size: 328px;
+  
+      &__item {
+        border-radius: 8px;
+        padding: 8px;
+      }
+  
+      &__sticker {
+        padding: 4px;
+        border-radius: 4px;
+        inline-size: 60px;
+        block-size: 18px;
+      }
+  
+      &__sticker p {
+        line-height: 10.4px;
+      }
+  
+      &__image {
+        padding: 5px 5px;
+      }
+  
+      &__title {
+        block-size: 26px;
+        line-height: 13px;
+      }
+  
+      &__description {
+        block-size: 32px;
+        line-height: 10.4px;
+      }
+  
+      &__price {
+        line-height: 20.89px;
+        margin-top: 2px;
+      }
+  
+      &__button {
+  
+        &--delete {
+          block-size: 28px;
+          line-height: 11.72px;
+        }
+  
+        &--more {
+          inline-size: 100%;
+          block-size: 48px;
+          line-height: 16.41px;
+        }
+      }
+      
+    }
+  }
+}
+
