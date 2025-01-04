@@ -4,10 +4,12 @@
 
 body {
   min-width: 360px;
-  max-width: 1440px;
   box-sizing: border-box;
   background-color: #f4f4f4;
   padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   ul,
   button {
