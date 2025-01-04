@@ -65,10 +65,26 @@ function renderProducts() {
   }
 }
 
+const initialCards = document.querySelectorAll(".card__item");
+initialCards.forEach((card) => {
+  const deleteButton = card.querySelector(".card__button--delete");
+  deleteButton.addEventListener("click", () => {
+    card.remove();
+    displayedCount--;
+    if (
+      displayedCount < products.length &&
+      loadMoreButton.style.display === "none"
+    ) {
+      loadMoreButton.style.display = "block";
+    }
+  });
+});
+
 fetch("https://fakestoreapi.com/products")
   .then((response) => response.json())
   .then((data) => {
     products = data;
+    renderProducts();
   })
   .catch((error) => console.error("Error fetching data:", error));
 
